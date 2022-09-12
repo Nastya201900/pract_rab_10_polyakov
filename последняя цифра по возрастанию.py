@@ -1,0 +1,6 @@
+f = open('test1.txt', 'r')
+l = sorted(list(map(int, f.read().split())), key=lambda x: x % 10)
+f.close()
+f = open('test2.txt', 'w')
+f.write(''.join([str(x) + ' ' for x in l]))
+f.close()
